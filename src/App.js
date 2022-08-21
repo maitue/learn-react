@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react'
 
 function App() {
+  const [counter, setCounter] = useState(1);
+  const orders = [20,30,50]
+  const handleIncrease = () => {
+    const total = orders.reduce((total, cur)=> total + cur);
+    console.log(total)
+    setCounter(counter + 1)
+  }
+  const [info, setInfor] = useState({
+    name: 'Pham Thi Khanh Hien',
+    age: 27,
+    address: 'Hai Duong, VN'
+
+  })
+  const handleUpdate =() => {
+      setInfor({
+        ...info,//thhêm vào mảng đã có
+        bio: "Vợ của Tuế ...."
+      })
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React With Mai Tuế
-        </a>
-      </header>
+      <h1>{counter}</h1>
+      <button onClick={handleIncrease}>Increase</button>
+      <h2> {JSON.stringify(info)}</h2>
+      <button onClick={handleUpdate}>Update</button>
     </div>
   );
 }
