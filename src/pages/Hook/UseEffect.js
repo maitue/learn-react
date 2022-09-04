@@ -12,11 +12,11 @@ function UseEffect() {
     // callback se luon duoc goi khi component mounted
     // 3. useEffect(calbacck, [deps])
     // calbcak se duoc goi lai khi deps thay doi 
-
+// cleanuo function luon duoc goi truoc khi component unmo
     const [title, setTitle] = useState('')
     const [posts, setPosts] = useState([])
     const [type, setType] = useState('posts')
-
+    const [showGotoTop,setShowGotoTop] = useState(false)
     useEffect( () => {
 
         document.title = title
@@ -27,6 +27,20 @@ function UseEffect() {
             })
        
     },[type]) // them [] se chi goi mot lan
+
+    useEffect(() => {
+        const handleScroll= () => {
+            if (window.scrollY >= 200) {
+                setShowGotoTop(true)
+            } else {
+                setShowGotoTop(false)
+            }
+        }
+        window.addEventListener('scroll',handleScroll)
+        return () => {
+            window.removeEventListener('scroll',handleScroll)
+        }
+    },[])
 
     return ( 
         <div>
@@ -48,6 +62,13 @@ function UseEffect() {
 
                 ))}
             </ul>
+            {showGotoTop && (
+                <button style={{
+                    position:'fixed',
+                    right:20,
+                    bottom:20,
+                }}> Go To Top</button>
+            )}
         </div>
 
     );
