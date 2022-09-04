@@ -2,6 +2,7 @@ import { Routes, Route, Link} from 'react-router-dom'
 import HomePage  from './pages/Home/Home.js'
 import  LearnHook  from './pages/Hook/LearnHook'
 import UseEffect from './pages/Hook/UseEffect.js'
+import CountDown from './pages/Hook/CountDown'
 import { useState } from 'react'
 import './App.css';
 function App() {
@@ -45,13 +46,17 @@ function App() {
                 <li>
                     <Link to="/UseEffect">UseEffect</Link>
                 </li>
+                <li>
+                    <Link to="/CountDown">CountDown</Link>
+                </li>
             </ul> 
         </nav>
 
         <Routes>
             <Route path='/' element={ <HomePage/> }></Route>
             <Route path='/LearnHook' element={<LearnHook/>}></Route>
-            <Route path='/UseEffect' element= {<UseEffect/>}></Route>
+            <Route path='/UseEffect' element={<UseEffect/>}></Route>
+            <Route path='/CountDown' element={<CountDown/>}></Route>
         </Routes>
     </div>
   );
