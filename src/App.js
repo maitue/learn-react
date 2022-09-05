@@ -4,6 +4,7 @@ import  LearnHook  from './pages/Hook/LearnHook'
 import UseEffect from './pages/Hook/UseEffect.js'
 import CountDown from './pages/Hook/CountDown'
 import { useState } from 'react'
+import Content from './Content.js'
 import './App.css';
 function App() {
   // const [counter, setCounter] = useState(1);
@@ -33,6 +34,7 @@ function App() {
   //     <button onClick={handleUpdate}>Update</button>
   //   </div>
   // );
+  const [show,setShow] = useState(false)
   return (
     <div className="App">
         <nav>
@@ -51,7 +53,8 @@ function App() {
                 </li>
             </ul> 
         </nav>
-
+        <button onClick={()=>setShow(!show)}>Toggle</button>
+        {show && <Content />}
         <Routes>
             <Route path='/' element={ <HomePage/> }></Route>
             <Route path='/LearnHook' element={<LearnHook/>}></Route>
