@@ -3,6 +3,7 @@ import HomePage  from './pages/Home/Home.js'
 import  LearnHook  from './pages/Hook/LearnHook'
 import UseEffect from './pages/Hook/UseEffect.js'
 import CountDown from './pages/Hook/CountDown'
+import PageViewAvatar from './pages/Hook/PageViewAvatar.js'
 import { useState } from 'react'
 import Content from './Content.js'
 import './App.css';
@@ -51,6 +52,9 @@ function App() {
                 <li>
                     <Link to="/CountDown">CountDown</Link>
                 </li>
+                <li>
+                    <Link to="/PageViewAvatar">PageViewAvatar</Link>
+                </li>
             </ul> 
         </nav>
         <button onClick={()=>setShow(!show)}>Toggle</button>
@@ -60,6 +64,7 @@ function App() {
             <Route path='/LearnHook' element={<LearnHook/>}></Route>
             <Route path='/UseEffect' element={<UseEffect/>}></Route>
             <Route path='/CountDown' element={<CountDown/>}></Route>
+            <Route path='/PageViewAvatar' element={<PageViewAvatar/>}></Route>
         </Routes>
     </div>
   );
