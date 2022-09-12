@@ -4,6 +4,10 @@ import  LearnHook  from './pages/Hook/LearnHook'
 import UseEffect from './pages/Hook/UseEffect.js'
 import CountDown from './pages/Hook/CountDown'
 import PageViewAvatar from './pages/Hook/PageViewAvatar.js'
+import FakeChatApp from './pages/Hook/FakeChatApp.js'
+import UseReducer from './pages/Hook/UseReducer.js'
+import TodoUseReducer from './pages/Hook/TodoUseReducer.js'
+import UseContext from './pages/Hook/UseConText/UseContext'
 import { useState } from 'react'
 import Content from './Content.js'
 import './App.css';
@@ -55,6 +59,18 @@ function App() {
                 <li>
                     <Link to="/PageViewAvatar">PageViewAvatar</Link>
                 </li>
+                <li>
+                    <Link to="/FakeChatApp">FakeChatApp</Link>
+                </li>
+                <li>
+                    <Link to="/UseReducer">UseReducer</Link>
+                </li>
+                <li>
+                    <Link to="/TodoUseReducer">TodoUseReducer</Link>
+                </li>
+                <li>
+                    <Link to="/UseContext">UseContext</Link>
+                </li>
             </ul> 
         </nav>
         <button onClick={()=>setShow(!show)}>Toggle</button>
@@ -64,7 +80,11 @@ function App() {
             <Route path='/LearnHook' element={<LearnHook/>}></Route>
             <Route path='/UseEffect' element={<UseEffect/>}></Route>
             <Route path='/CountDown' element={<CountDown/>}></Route>
-            <Route path='/PageViewAvatar' element={<PageViewAvatar/>}></Route>
+            <Route path='/PageViewAvatar' element={<PageViewAvatar />}></Route>
+            <Route path='/FakeChatApp' element={<FakeChatApp />}>FakeChatApp</Route>
+            <Route path='/UseReducer' element={<UseReducer />}>UseReducer</Route>
+            <Route path='/TodoUseReducer' element={<TodoUseReducer />}>TodoUseReducer</Route>
+            <Route path='/UseContext' element={<UseContext />}>UseContext</Route>
         </Routes>
     </div>
   );

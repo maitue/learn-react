@@ -7,6 +7,19 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 console.log(React);
+function emitComment(id) { 
+  setInterval(() => { 
+    window.dispatchEvent(
+      new CustomEvent(`lesson-${id}`, {
+        detail: `noi dung cua lesson ${id}`
+      })
+    )
+  }, 3000000)
+}
+emitComment(1)
+emitComment(2)
+emitComment(3)
+
 root.render(
   <React.StrictMode>
     <Router>
