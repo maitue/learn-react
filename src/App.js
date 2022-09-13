@@ -8,6 +8,8 @@ import FakeChatApp from './pages/Hook/FakeChatApp.js'
 import UseReducer from './pages/Hook/UseReducer.js'
 import TodoUseReducer from './pages/Hook/TodoUseReducer.js'
 import UseContext from './pages/Hook/UseConText/UseContext'
+import Provider from './pages/Hook/store/Provider.js'
+import GlosbeState from './pages/Hook/store/GlosbeState'
 import { useState } from 'react'
 import Content from './Content.js'
 import './App.css';
@@ -71,6 +73,9 @@ function App() {
                 <li>
                     <Link to="/UseContext">UseContext</Link>
                 </li>
+                <li> 
+                    <Link to="/glosbeState">glosbeState</Link>
+                </li>
             </ul> 
         </nav>
         <button onClick={()=>setShow(!show)}>Toggle</button>
@@ -85,6 +90,8 @@ function App() {
             <Route path='/UseReducer' element={<UseReducer />}>UseReducer</Route>
             <Route path='/TodoUseReducer' element={<TodoUseReducer />}>TodoUseReducer</Route>
             <Route path='/UseContext' element={<UseContext />}>UseContext</Route>
+            
+            <Route path='/glosbeState' element={ <Provider><GlosbeState /></Provider> }>glosbeState</Route>
         </Routes>
     </div>
   );
