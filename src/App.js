@@ -1,9 +1,11 @@
+import React, {useEffect} from "react";
 import {BrowserRouter} from 'react-router-dom';
 import { Provider } from 'react-redux';
-import {Routers} from './router/Routers'
+import {Routers} from './router/Routers';
 import './App.css';
 export default function App() {
 return (
+  //<h1>demo</h1>
     <BrowserRouter>
         <Routers/>
     </BrowserRouter>

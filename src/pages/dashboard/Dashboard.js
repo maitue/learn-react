@@ -1,16 +1,8 @@
 import React, { useEffect } from "react";
 
-const Dashboard = (props) => {
-  useEffect(() => {}, []);
+const Dashboard = () => {
   return (
-    
-    <div className="row">
-      <div className="col-md-12">
-        <div className="kt-section">
-          <h1>demo</h1>
-        </div>
-      </div>
-    </div>
+    <h1>demo</h1>
   );
 };
 
