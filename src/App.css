@@ -44,4 +44,10 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: inline-flex;
+}
+
+ul li {
+  margin-left: 10px;
+  margin-bottom: 20px;
 }
