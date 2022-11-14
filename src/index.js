@@ -5,11 +5,10 @@ import App from './App';
 
 
 ReactDOM.render(
-  <App/>,
-  document.getElementById('root')
+  <App />,
+  document.getElementById('root'),
 );
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
+ //const root = ReactDOM.createRoot(document.getElementById('root'));
 // function emitComment(id) { 
 //   setInterval(() => { 
 //     window.dispatchEvent(
@@ -24,11 +23,9 @@ ReactDOM.render(
 // emitComment(3)
 
 // root.render(
-//   <React.StrictMode>
-//     <Router>
+  
 //         <App />
-//     </Router>
-//   </React.StrictMode>
+ 
 // );
 
 // If you want to start measuring performance in your app, pass a function

@@ -2,14 +2,12 @@ import {BrowserRouter} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import {Routers} from './router/Routers'
 import './App.css';
-function App() {
-
-<Provider>
+export default function App() {
+return (
     <BrowserRouter>
         <Routers/>
     </BrowserRouter>
-</Provider>
-
+);
   // const [counter, setCounter] = useState(1);
   // const orders = [20,30,50]
   // const handleIncrease = () => {
@@ -96,4 +94,3 @@ function App() {
 //   );
 }
 
-export default App;
