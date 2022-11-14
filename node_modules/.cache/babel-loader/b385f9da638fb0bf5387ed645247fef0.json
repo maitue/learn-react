@@ -1,0 +1,1 @@
+{"ast":null,"code":"/* global Deno -- Deno case */\nmodule.exports = typeof Deno == 'object' && Deno && typeof Deno.version == 'object';","map":null,"metadata":{},"sourceType":"script"}
